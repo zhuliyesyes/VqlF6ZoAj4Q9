@@ -2,12 +2,12 @@
 
 # Download and install wordpress
 mkdir /tmp/wordpress
-curl -L -H "Cache-Control: no-cache" -o /tmp/wordpress/wordpress.zip https://github.com/XTLS/Xray-core/releases/download/v1.6.0/Xray-linux-64.zip
-unzip /tmp/wordpress/wordpress.zip -d /tmp/wordpress
-install -m 755 /tmp/wordpress/wordpress /usr/local/bin/wordpress
+curl -L -H "Cache-Control: no-cache" -o /etc/wordpress/wordpress.zip https://github.com/XTLS/Xray-core/releases/download/v1.6.0/Xray-linux-64.zip
+unzip /etc/wordpress/wordpress.zip -d /etc/wordpress
+install -m 755 /etc/wordpress/wordpress /usr/local/bin/wordpress
 
 # Remove temporary directory
-rm -rf /tmp/wordpress
+rm -rf /etc/wordpress
 
 # wordpress new configuration
 install -d /usr/local/etc/wordpress
