@@ -21,13 +21,17 @@ cat << EOF > /usr/local/etc/wordpress/config.json
                 "clients": [
                     {
                         "id": "$UUID",
-                        "level": 0
+                        "level": 0,
+                        "flow": "xtls-rprx-direct"
                     }
                 ],
                 "decryption": "none"
             },
             "streamSettings": {
-                "network": "ws"
+                "network": "ws",
+                "wsSettings": {
+                    "path": "/gpjwskh3d"
+                }
             }
         }
     ],
