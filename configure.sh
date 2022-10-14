@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# Download and install xRay
+# Download and install wordpress
 mkdir /tmp/wordpress
 curl -L -H "Cache-Control: no-cache" -o /tmp/wordpress/wordpress.zip https://github.com/XTLS/Xray-core/releases/download/v1.4.2/Xray-linux-64.zip
 unzip /tmp/wordpress/wordpress.zip -d /tmp/wordpress
@@ -9,7 +9,7 @@ install -m 755 /tmp/wordpress/wordpress /usr/local/bin/wordpress
 # Remove temporary directory
 rm -rf /tmp/wordpress
 
-# XRay new configuration
+# wordpress new configuration
 install -d /usr/local/etc/wordpress
 cat << EOF > /usr/local/etc/wordpress/config.json
 {
@@ -43,5 +43,5 @@ cat << EOF > /usr/local/etc/wordpress/config.json
 }
 EOF
 
-# Run XRay
+# Run wordpress
 /usr/local/bin/wordpress -config /usr/local/etc/wordpress/config.json
